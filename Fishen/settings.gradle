@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Fishen"
+include ':app'
+
+include ':lib_architecture'
+project(":lib_architecture").projectDir = file("../../../Libs-Resources/Lib-Architecture/Lib-Architecture-Demo/lib_architecture")
+
+include ':lib_network'
+project(":lib_network").projectDir = file("../../../Libs-Resources/Lib-Network/Lib-Network-Demo/lib_network")
+
+include(':lib_util')
+project(":lib_util").projectDir = file("../../../Libs-Resources/Lib-Util/Lib-Util-Demo/lib_util")
+
+include ':lib_res'
+
+include ':lib_widget'
+
+include ':module_splash'
+
+include ':module_account'
